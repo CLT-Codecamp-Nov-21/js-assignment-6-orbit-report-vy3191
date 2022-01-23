@@ -8,12 +8,13 @@ import { Satellite } from '../satellite';
 })
 
 export class OrbitListComponent implements OnInit {
+	@Input() satellites: Satellite[];
+	constructor() { }
 
-  @Input() satellites: Satellite[];
-  constructor() { }
+	warning: string = 'warning';
 
-  ngOnInit() {
-  }
+	ngOnInit() {
+	}
 
 	sort(column: string): void {
 		// array.sort modifies the array, sorting the items based on the given compare function
