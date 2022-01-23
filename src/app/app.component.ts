@@ -31,7 +31,7 @@ export class AppComponent {
 
 				 // make a copy of the sourceList to be shown to the user
 				 this.displayList = this.sourceList.slice(0);
-				 console.log('displayList', this.displayList)
+				//  console.log('displayList', this.displayList)
 	  
 			}.bind(this));
 		}.bind(this));
