@@ -12,6 +12,7 @@ export class OrbitListComponent implements OnInit {
 	constructor() { }
 
 	warning: string = 'warning';
+	bcColor: string = 'bcColor'
 
 	ngOnInit() {
 	}
@@ -26,6 +27,14 @@ export class OrbitListComponent implements OnInit {
 			}
 			return 0;
 		});
+	}
+
+	isEven(index: number): boolean {
+		if(index % 2 === 0) {
+			return true;
+		}
+
+		return false;
 	}
 
 }

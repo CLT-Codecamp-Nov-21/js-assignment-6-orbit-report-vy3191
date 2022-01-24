@@ -27,7 +27,6 @@ export class OrbitCountsComponent implements OnInit {
     }
 
     countByType(type: string): number {
-		console.log(this.satellites)
 		let count = 0;
 		if (this.satellites) {
 			for (let i = 0; i < this.satellites.length; i++) {
@@ -46,7 +45,6 @@ export class OrbitCountsComponent implements OnInit {
 
 		for(let i: number = 0; i < this.satellites.length; i++) {
 			if(!seen[this.satellites[i].type]) {
-				console.log(this.satellites[i])
 				withOutDuplicates[count] = this.satellites[i];
 				count++;
 			}
