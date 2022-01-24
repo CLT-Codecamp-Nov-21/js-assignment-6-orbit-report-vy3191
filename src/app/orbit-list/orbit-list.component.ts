@@ -8,12 +8,14 @@ import { Satellite } from '../satellite';
 })
 
 export class OrbitListComponent implements OnInit {
+	@Input() satellites: Satellite[];
+	constructor() { }
 
-  @Input() satellites: Satellite[];
-  constructor() { }
+	warning: string = 'warning';
+	bcColor: string = 'bcColor'
 
-  ngOnInit() {
-  }
+	ngOnInit() {
+	}
 
 	sort(column: string): void {
 		// array.sort modifies the array, sorting the items based on the given compare function
@@ -25,6 +27,14 @@ export class OrbitListComponent implements OnInit {
 			}
 			return 0;
 		});
+	}
+
+	isEven(index: number): boolean {
+		if(index % 2 === 0) {
+			return true;
+		}
+
+		return false;
 	}
 
 }
